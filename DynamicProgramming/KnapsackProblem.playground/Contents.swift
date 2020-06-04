@@ -33,11 +33,11 @@ Knapsack Proble Dynamic Programming
  
  20     1       0       20      30
  
- 30     1       0       30      10
+ 30     1       0       30      50
  
  
         Let weight elements = {10, 20, 30}
-        Let weight values = {1, 1, 1}
+        Let weight values = {1, 1, 2}
         Capacity = 2
  
  Solution:
@@ -76,13 +76,15 @@ func findKanpsack(totalWeight W: Int, weight wt: [Int], values val: [Int], size 
         }
     }
     print(K)
-    return K[n-1][W]
+    return K[n][W]
 }
 
 let val = [10, 20, 30]
-let wt = [1, 1, 2]
+let wt = [1, 1, 1]
 let W = 2;
 let n = 3 //sizeof(val)/sizeof(val[0])
 let output = findKanpsack(totalWeight: W, weight: wt, values: val, size: n)
 
 print("Output: ", output)
+
+
