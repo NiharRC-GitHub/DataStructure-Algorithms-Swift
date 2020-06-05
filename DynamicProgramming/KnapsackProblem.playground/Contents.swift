@@ -2,7 +2,7 @@
 Created by nihar chadhei
 
 Knapsack Proble Dynamic Programming
-        Let weight elements = {1, 3, 5}
+Q1.     Let weight elements = {1, 3, 5}
         Let weight values = {10, 15, 40}
         Capacity = 5
  
@@ -19,8 +19,51 @@ Knapsack Proble Dynamic Programming
  
  
  
+ Description:
  
-        Let weight elements = {10, 20, 30}
+ Row 1 :
+ 
+                0       1       2       3       4       5
+ val    wt
+
+ 10     1       0       10      10      10      10      10
+ 
+ 
+ Value 0 :
+ we have 0 weight in 1st coloumn and item 1 is having wt 1. Hence can't choose the value 10 so we consider 0.
+ 
+ Value 10:
+ we have 1 weight in 2nd coloumn and item 1 is having wt 1. Hence we can choose the value 10 and rest column in the row will same value as weight is less in  comparision.
+ 
+  Row 2 :
+                0       1       2       3       4       5
+ val    wt
+
+ 10     1       0       10      10      10      10      10
+ 
+ 15     3       0       10      10      15      25      25
+ 
+ Value 0 :
+ we have 0 weight in 1st coloumn and item 1 is having wt 1. Hence in this situation we can just pick the row same column value i.e 0. And same for coloumn 2 and 3, as the item weight we have 3. So the value will be 10, 10. So, here the condition and calculation is
+ 
+ i = row
+ w = coloumn
+    if w < wt[i] {
+    K[i][w] = K[i-1][w]
+ 
+ value 15:
+ Here our item weight and coloumn 4 has same weight. So either we can choose the top row same coloumn value i.e, 10 or we can choose the current item value 15 + Matrix[coloumn wt(3) - item weight (3)], i.e Matrix[0] = 0
+ So we will choose max(10 , (15 + 0)) = 15
+ 
+ i = row
+ w = coloumn
+    if w >= wt[i] {
+    K[i][w] =max(val[i] + K[i-1][w-wt[i]],  K[i-1][w])
+ 
+ And so on the matrix will form.
+ 
+ 
+Q2.     Let weight elements = {10, 20, 30}
         Let weight values = {1, 1, 1}
         Capacity = 2
  
@@ -36,7 +79,7 @@ Knapsack Proble Dynamic Programming
  30     1       0       30      50
  
  
-        Let weight elements = {10, 20, 30}
+Q3.     Let weight elements = {10, 20, 30}
         Let weight values = {1, 1, 2}
         Capacity = 2
  
