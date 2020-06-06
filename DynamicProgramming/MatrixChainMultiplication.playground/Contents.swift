@@ -254,7 +254,7 @@ func matrixChainOrderMatrix(arr: [Int], n: Int) -> Int {
     return T[0][n]
 }
 
-let arr1 = [5, 4, 6, 2, 7] // for bigger number Playground crash, so takes only upto length 3.
+let arr1 = [5, 4, 6, 2, 7]
 let l1 = 5 //sizeof(arr)/sizeof(arr[0])
 let output1 = matrixChainOrderMatrix(arr: arr1, n: l1-1)
 print("Output : ", output1)
