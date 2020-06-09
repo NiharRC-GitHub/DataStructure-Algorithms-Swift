@@ -14,7 +14,7 @@ Example: 5x4, 4x6, 6x2, 2x7
     i.e, 5x4 and 4x6 is possible as 4 of 5x4 == 4 of 4x6 but 5x4 and 6x4 can't be possible.
        And the number of multiplication for 5x4 and 4x6 is 5 * 6 * 4 = 120.
  
- For our ecxmaple there are so many ways to multiply i.e,
+ For our exmaple there are so many ways to multiply i.e,
  --> M1(M2(M3 * M4))
  -->(M1 * M2)(M3 * M4)
  -->M1(M2 * M3)M4 etc.
