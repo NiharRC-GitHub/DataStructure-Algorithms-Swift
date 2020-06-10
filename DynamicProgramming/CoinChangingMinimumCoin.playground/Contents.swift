@@ -379,3 +379,18 @@ let sum = 4
 minimumCoinsRequires(coins: coins, total: sum)
 
 minimumCoinsRequires(coins: [2, 1, 3, 5, 4], total: 16)
+
+/*
+ OutPut :
+ 
+ Minimum number of coins Required :  2
+ Coins are :
+ 2
+ 2
+ Minimum number of coins Required :  4
+ Coins are :
+ 5
+ 5
+ 3
+ 3
+ */
