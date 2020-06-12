@@ -232,6 +232,10 @@ Time complexity :
 
 //Matrix
 
+/*
+ 5x4, 4x6, 6x2, 2x7
+ [5, 4, 6, 2, 7]
+ */
 func matrixChainOrderMatrix(arr: [Int], n: Int) -> Int {
     var T = Array(repeating: Array(repeating: 0, count: n+1), count: n+1)
     var temp = 0
@@ -259,8 +263,21 @@ let l1 = 5 //sizeof(arr)/sizeof(arr[0])
 let output1 = matrixChainOrderMatrix(arr: arr1, n: l1-1)
 print("Output : ", output1)
 
+/*
+Output :  158
+*/
 
 // Recursive
+
+/*
+ [5, 4] [4, 6]
+            1           2
+ 
+    1       0           120
+ 
+    2       0           0
+
+*/
 
 func matrixChainOrderRecursive(arr: [Int], i: Int, j: Int) -> Int {
     var count = 0
@@ -279,19 +296,13 @@ func matrixChainOrderRecursive(arr: [Int], i: Int, j: Int) -> Int {
     return result
 }
 
-let arr2 = [5, 4, 6] // for bigger number Playground crash, so takes only upto length 3.
+let arr2 = [5, 4, 6] 
 let l2 = 3 //sizeof(arr)/sizeof(arr[0])
 let output2 = matrixChainOrderRecursive(arr: arr2, i: 1, j: l2-1)
 print("Output : ", output2)
 
 /*
- [5, 4] [4, 6]
-            1           2
- 
-    1       0           120
- 
-    2       0           0
-
-*/
+ Output :  120
+ */
 
 

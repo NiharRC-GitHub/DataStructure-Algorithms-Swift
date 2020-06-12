@@ -2,8 +2,8 @@
 Created by nihar chadhei
 
 Knapsack Proble Dynamic Programming
-Q1.     Let weight elements = {1, 3, 5}
-        Let weight values = {10, 15, 40}
+Q1.     Let weight elements = [1, 3, 5]
+        Let weight values = [10, 15, 40]
         Capacity = 5
  
  Solution:
@@ -63,8 +63,8 @@ Q1.     Let weight elements = {1, 3, 5}
  And so on the matrix will form.
  
  
-Q2.     Let weight elements = {10, 20, 30}
-        Let weight values = {1, 1, 1}
+Q2.     Let weight elements = [10, 20, 30]
+        Let weight values = [1, 1, 1]
         Capacity = 2
  
  Solution:
@@ -79,8 +79,8 @@ Q2.     Let weight elements = {10, 20, 30}
  30     1       0       30      50
  
  
-Q3.     Let weight elements = {10, 20, 30}
-        Let weight values = {1, 1, 2}
+Q3.     Let weight elements = [10, 20, 30]
+        Let weight values = [1, 1, 2]
         Capacity = 2
  
  Solution:
@@ -98,15 +98,9 @@ Q3.     Let weight elements = {10, 20, 30}
 
 
 func findKanpsack(totalWeight W: Int, weight wt: [Int], values val: [Int], size n: Int) -> Int {
-    var K = Array(repeating: Array(repeating: 0, count: n+1), count: W+2)
+    let arrSize = n > W ? n : W
+    var K = Array(repeating: Array(repeating: 0, count: arrSize+1), count: arrSize+1)
     
-/*
-    This is the formula, but for bigger calculation may be playground through error in case of arry operation.
-    Here the first example is not able to run but other two will run succecfully
-    Let weight elements = {1, 3, 5}
-    Let weight values = {10, 15, 40}
-    Capacity = 5
-*/
     for i in 0...n {
         for w in 0...W {
             if (i == 0 || w == 0) {
@@ -118,16 +112,30 @@ func findKanpsack(totalWeight W: Int, weight wt: [Int], values val: [Int], size 
             }
         }
     }
-    print(K)
     return K[n][W]
 }
 
 let val = [10, 20, 30]
 let wt = [1, 1, 1]
-let W = 2;
+let W = 2
 let n = 3 //sizeof(val)/sizeof(val[0])
 let output = findKanpsack(totalWeight: W, weight: wt, values: val, size: n)
 
 print("Output: ", output)
 
+/*
+ Output:  50
+ */
 
+
+let val1 = [10, 15, 40]
+let wt1 = [1, 3, 5]
+let W1 = 5
+let n1 = 3 //sizeof(val)/sizeof(val[0])
+let output1 = findKanpsack(totalWeight: W1, weight: wt1, values: val1, size: n1)
+
+print("Output: ", output1)
+
+/*
+Output:  40
+*/
