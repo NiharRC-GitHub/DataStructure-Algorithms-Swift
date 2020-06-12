@@ -107,9 +107,17 @@ func lengthOfLSC(arr: [Int], arrLenght: Int) -> Int {
 let ex1 = [11, 20, 10, 33, 22]
 let l1 = 4 //sizeof(ex1)/sizeof(ex1[0])
 let output1 = lengthOfLSC(arr: ex1, arrLenght: l1)
-print(output1)
+print("Result :", output1)
+
+/*
+ Result : 3
+ */
 
 let ex2 = [11, 20, 10, 33, 19, 48, 37, 55, 70]
 let l2 = 8 //sizeof(ex2)/sizeof(ex2[0])
 let output2 = lengthOfLSC(arr: ex2, arrLenght: l2)
-print(output2)
+print("Result :", output2)
+
+/*
+ Result : 6
+ */

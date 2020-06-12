@@ -77,11 +77,16 @@ let l2 = str2.count - 1
 let output = lcsRecursion(str1: str1, str2: str2, l1: l1, l2: l2)
 print("Result :", output)
 
+/*
+ Result : 4
+ */
+
 
 //Resolving by matrix Calculation
 
 func lcs(str1: String, str2: String, l1: Int, l2: Int) -> Int {
-    var K = Array(repeating: Array(repeating: 0, count: l1+1), count: l2+1)
+    let arrSize = l1 > l2 ? l1 : l2
+    var K = Array(repeating: Array(repeating: 0, count: arrSize+1), count: arrSize+1)
     for i in 0...l1 {
         for j in 0...l2 {
             if (i == 0 || j == 0) {
@@ -103,3 +108,7 @@ let matrixL2 = str2.count
 
 let matrixOutput = lcs(str1: matrixStr1, str2: matrixStr2, l1: matrixL1, l2: matrixL2)
 print("Result :", matrixOutput)
+
+/*
+Result : 4
+*/

@@ -124,7 +124,10 @@ let sum = 5
 let size = 5
 var T = Array(repeating: 0, count: size)
 subsetSum(arr: arr, rArray: T, arrSize: size , rArrSize: 0, sum: 0, i: 0, targetSum: sum)
+
 /*
+ Output :
+ 
  Found Result:  [2, 3, 0, 0, 0]
  Found Result:  [2, 2, 1, 0, 0]
  Found Result:  [4, 1, 0, 0, 0]
@@ -227,7 +230,8 @@ subsetSum(arr: arr, rArray: T, arrSize: size , rArrSize: 0, sum: 0, i: 0, target
  */
 
 func subset_sum(input: [Int], targetSum: Int, size: Int) -> Bool {
-    var T = Array(repeating: Array(repeating: false, count: size+1), count: targetSum+1)
+    let arrSize = size > targetSum ? size : targetSum
+    var T = Array(repeating: Array(repeating: false, count: arrSize+1), count: arrSize+1)
     
     for i in 0...size {
         T[i][0] = true
@@ -249,5 +253,8 @@ let arr1 = [2, 4, 3, 2, 1]
 let sum1 = 5
 let size1 = 5
 let result = subset_sum(input: arr1, targetSum: sum1, size: size1)
-print(result) //True
+print("Result : ", result)
 
+/*
+ Result :  true
+ */
