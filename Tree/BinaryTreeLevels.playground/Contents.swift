@@ -10,7 +10,11 @@ Print Binary Tree levels in sorted order
                     /  \
                 10    14
                 
- 
+ Ans :
+[20]
+[8, 22]
+[4, 5, 6, 12]
+[10, 14]
  
  
 */
