@@ -54,5 +54,8 @@ tree.root?.left?.left?.right = Node(val: 6)
 tree.root?.left?.left?.left = Node(val: 7)
 
 tree.printTreeAncestors(node: tree.root, target: 6)
-print("/////////////")
+//Ans: True (4,2,1)
 tree.printTreeAncestors(node: tree.root, target: 3)
+//Ans: True (1)
+tree.printTreeAncestors(node: tree.root, target: 8)
+//Ans: False
