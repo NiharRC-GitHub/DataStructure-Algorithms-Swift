@@ -11,7 +11,7 @@ Averages of Levels in Binary Tree
                 10    14
                 
  
- 
+ Ans: 20.0 , 15.0 , 6.75 , 12.0 
  
 */
 import UIKit
