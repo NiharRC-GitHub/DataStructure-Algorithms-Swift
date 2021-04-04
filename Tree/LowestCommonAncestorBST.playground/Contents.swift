@@ -59,8 +59,12 @@ tree.root?.left?.right?.right = Node(val: 14)
 var node = tree.printLowestCommonAncestors(node: tree.root, n1: 10, n2: 14)
 print(node?.data ?? -1)
 
+//Ans: 12
+
 node = tree.printLowestCommonAncestors(node: tree.root, n1: 4, n2: 14)
 print(node?.data ?? -1)
+//Ans: 8
 
 node = tree.printLowestCommonAncestors(node: tree.root, n1: 4, n2: 22)
 print(node?.data ?? -1)
+//Ans: 20
