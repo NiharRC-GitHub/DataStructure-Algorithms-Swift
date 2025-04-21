@@ -66,7 +66,7 @@ struct MinimumSubsetSum {
             }
         }
         // this is the loop to find first subset sum
-        for i in stride(from: targetSum, through: 0, by: -1) { // OR we can do {for i in (0...len).reversed()} {
+        for i in stride(from: targetSum, through: 0, by: -1) { // OR we can do {for i in (0...targetSum).reversed()} {
             if dp[len][i] {// which ever first subset sum is true
                 return sum - i * 2
             }
